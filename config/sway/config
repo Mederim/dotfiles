@@ -18,12 +18,19 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu bemenu-run #--tb '#8662a1'  --tf '#c08ce7'  --fb '#0c0a0e' --ff '#c08ce7'  --nb '#0c0a0e' --nf '#8662a1' --hb '#8662a1' --hf '#51226F' --sb '#8662a1' --sf '#51226F' --scb '#0c0a0e'  --scf '#7227D7'
+
+set $menu bemenu-run --tb "$color0" --tf "$color4"\
+		     --fb "$color0" --ff "$color8"\
+		     --nb "$color0" --nf "$color8"\
+                     --hb "$color0" --hf "$color4"\
+                     --tb "$color0" --tf "$color1"\
+                     --sb "$color8" --sf "$color4"
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-exec wbg /home/hellboy/cropped-1366-768-908634.png
+#exec wbg /home/hellboy/cropped-1366-768-908634.png
+exec oguri
 #
 # Example configuration:
 #
