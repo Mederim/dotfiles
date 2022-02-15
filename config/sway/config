@@ -92,6 +92,15 @@ exec oguri
     bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
     bindsym XF86AudioLowerVolume exec amixer set Master 5%-
     bindsym XF86AudioMute	 exec amixer set Master toggle
+    
+    # Printscreen
+ 
+    bindsym Print exec grim -t png
+    bindsym $mod+Print exec grim -g "$(slurp)" -t png
+
+    # Wl-sunset
+ 
+    bindsym $mod+Shift+v exec wlsunset
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
