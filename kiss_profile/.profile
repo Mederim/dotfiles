@@ -18,6 +18,12 @@ KISS_PATH=$KISS_PATH:/var/db/kiss/community/community
 export XDG_RUNTIME_DIR=/tmp
 export MOZ_WAYLAND_DRM_DEVICE=/dev/dri/renderD128
 
+#ASHRC
+export ENV=~/.ashrc
+
+#NPM BINARIES
+export PATH="$PATH:$HOME/.npm/bin"
+
 #PIP BINARIES
 export PATH="${PATH}:${HOME}/.local/bin/"
 

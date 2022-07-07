@@ -19,18 +19,12 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 
-set $menu bemenu-run --tb "$color0" --tf "$color4"\
-		     --fb "$color0" --ff "$color8"\
-		     --nb "$color0" --nf "$color8"\
-                     --hb "$color0" --hf "$color4"\
-                     --tb "$color0" --tf "$color1"\
-                     --sb "$color8" --sf "$color4"
+set $menu bemenu-run -p "bemenu" --tb "$color0" --tf "$color4" --fb "$color0" --ff "$color8" --nb "$color0" --nf "$color8" --hb "$color0" --hf "$color4" --sb "$color8" --sf "$color4"
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-#exec wbg /home/hellboy/cropped-1366-768-908634.png
-exec oguri
+exec wbg $wallpaper
 #
 # Example configuration:
 #
@@ -65,6 +59,9 @@ exec oguri
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input * xkb_layout "br","us"
+input * xkb_options grp:ctrl_alt_toggle
+
 ### Key bindings
 #
 # Basics:
@@ -92,14 +89,12 @@ exec oguri
     bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
     bindsym XF86AudioLowerVolume exec amixer set Master 5%-
     bindsym XF86AudioMute	 exec amixer set Master toggle
-    
+
     # Printscreen
- 
     bindsym Print exec grim -t png
     bindsym $mod+Print exec grim -g "$(slurp)" -t png
 
     # Wl-sunset
- 
     bindsym $mod+Shift+v exec wlsunset
 
     # Exit sway (logs you out of your Wayland session)
