@@ -1,0 +1,2 @@
+alias mvi='mpv --config-dir=$HOME/.config/mvi'
+pokemon-colorscripts -r --no-title
