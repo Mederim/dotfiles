@@ -18,6 +18,9 @@ KISS_PATH=$KISS_PATH:/var/db/kiss/community/community
 export XDG_RUNTIME_DIR=/tmp
 export MOZ_WAYLAND_DRM_DEVICE=/dev/dri/renderD128
 
+#HYBRID GRAPHICS
+export env DRI_PRIME=1
+
 #ASHRC
 export ENV=~/.ashrc
 
